@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_10/custom_button_widget.dart';
 
 class OnePage extends StatelessWidget {
   const OnePage({super.key});
@@ -11,21 +12,15 @@ class OnePage extends StatelessWidget {
         title: Text('Page 1'),
         titleTextStyle: TextStyle(color: Colors.white, fontSize: 25),
       ),
-      backgroundColor: Colors.blue.shade900,
+      backgroundColor: Colors.purple.shade300,
       body: Center(
-        child: ElevatedButton(
-          onPressed: () {
-            Navigator.of(context)
-                .pushReplacementNamed('/twopage', arguments: '123')
-                .then((value) => print(value));
-          },
-          style: ElevatedButton.styleFrom(
-            backgroundColor: Colors.black,
-            foregroundColor: Colors.white,
+        child: CustomButtonWidget(
+          disabled: false,
+          onPressed: () {},
+          title: 'Custom BTN',
+          titleSize: 20,
           ),
-          child: Text('Ir para segunda Page'),
         ),
-      ),
-    );
+      );
   }
 }
