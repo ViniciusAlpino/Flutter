@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_10/one_page.dart';
-import 'package:flutter_application_10/two_page.dart';
+import 'package:flutter_application_10/views/one_page.dart';
+import 'package:flutter_application_10/views/two_page.dart';
 
 void main() {
   runApp(const MyApp());

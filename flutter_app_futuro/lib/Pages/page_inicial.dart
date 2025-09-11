@@ -15,9 +15,9 @@ class PageInicial extends StatelessWidget {
           children: [
             UserAccountsDrawerHeader(
               currentAccountPicture: CircleAvatar(
-                child: Text("User"),
                 foregroundColor: Colors.white,
                 backgroundColor: Colors.black87,
+                child: Text("User"),
               ),
               accountName: Text('Nome'),
               accountEmail: Text('Idade'),
