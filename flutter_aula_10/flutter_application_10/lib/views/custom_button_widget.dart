@@ -20,10 +20,9 @@ class CustomButtonWidget extends StatelessWidget {
       child: Text(title),
       style: ButtonStyle(
         textStyle: WidgetStateProperty.resolveWith((states) {
-          if(states.contains(WidgetState.pressed)) {
-            return TextStyle(
+          if(states.contains(WidgetState.pressed))
+          return TextStyle(
             fontSize: titleSize != null? titleSize! *2 : 28,);
-          }
             return TextStyle(fontSize: titleSize);
         }),
         foregroundColor: WidgetStateProperty.resolveWith<Color>((state) {

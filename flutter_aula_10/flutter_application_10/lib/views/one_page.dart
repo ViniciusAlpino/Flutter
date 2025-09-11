@@ -1,7 +1,7 @@
 
 import 'package:flutter_application_10/controllers/posts_controller.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_application_10/custom_button_widget.dart';
+import 'package:flutter_application_10/views/custom_button_widget.dart';
 
 class OnePage extends StatefulWidget {
   const OnePage({super.key});

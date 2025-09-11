@@ -6,7 +6,7 @@ void main() {
 // Todo projeto tem que ter esse comando de runApp, para rodar o app
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  const MyApp({Key? key}) : super(key: key);
   //vai ser StatelessWidget ou StatefulBuilder
 
   @override
@@ -80,8 +80,8 @@ class _MyHomePageState extends State<MyHomePage> {
       FloatingActionButton(
         onPressed: _decrementCounter,
         tooltip: 'Decrement',
-        backgroundColor: Colors.red,
         child: const Icon(Icons.minimize),
+        backgroundColor: Colors.red,
       ),
       ],)
     );
