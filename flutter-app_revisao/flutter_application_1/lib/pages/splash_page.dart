@@ -13,6 +13,7 @@ class _SplashPageState extends State<SplashPage> {
     super.initState();
     Future.delayed(
       Duration(seconds: 3),
+    // ignore: use_build_context_synchronously
     ).then((_) => Navigator.of(context).pushReplacementNamed('/login'),
   );
 }

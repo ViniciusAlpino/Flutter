@@ -16,7 +16,7 @@ class LoginController {
     inLoader.value = true;
     await Future.delayed(Duration(seconds: 2));
     inLoader.value = false;
-    return _login == 'admin' && _pass == '123';
+    return _login == 'adm' && _pass == '123';
    
   }
 }
