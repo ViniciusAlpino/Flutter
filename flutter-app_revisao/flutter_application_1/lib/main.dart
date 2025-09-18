@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/pages/home_page.dart';
-import 'package:flutter_application_1/pages/login_page.dart';
-import 'package:flutter_application_1/pages/splash_page.dart';
+import 'package:flutter_application_1/page/home_page.dart';
+import 'package:flutter_application_1/page/tela_carregamento.dart';
+import 'package:flutter_application_1/page/tela_login.dart';
+
 
 void main(){
   runApp(const MyApp());
@@ -18,12 +19,12 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primaryColor: Colors.green,
       ),
-      initialRoute: '/splash',
+      initialRoute: '/carregamento',
       routes: {
-        '/splash' : (_) => const SplashPage(),
-        '/login' : (_) =>  LoginPage(),
+        '/carregamento': (_) => const TelaCarregamento(),
+        '/login' : (_) => TelaLogin(),
         '/home' : (_) => const HomePage(),
-      },
+      }
     );
   }
 }
