@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/componetes/login/custom_login_buttom_component.dart';
 import 'package:flutter_application_1/controller/login_controller.dart';
+import 'package:flutter_application_1/widgets/custom_text_field_widget.dart';
 
 class TelaLogin extends StatelessWidget {
   LoginController _controller = LoginController();
@@ -16,36 +18,17 @@ class TelaLogin extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Icon(Icons.people, size: MediaQuery.of(context).size.height * 0.2),
-            TextField(
-              decoration: InputDecoration(label: Text('Login')),
+            CustomTextFieldWidget(
+              label: 'Login',
               onChanged: _controller.setLogin,
             ),
-            TextField(
-              decoration: InputDecoration(label: Text('Senha')),
-              obscureText: true,
+            CustomTextFieldWidget(
+              label: 'Senha',
               onChanged: _controller.setPass,
+              obscureText: true,
             ),
             SizedBox(height: 20),
-             ValueListenableBuilder<bool>(
-               valueListenable: _controller.inLoader,
-               builder: (_, inLoader, __) => inLoader ? CircularProgressIndicator() : ElevatedButton(
-                  onPressed: () {
-                    _controller.auth().then((result) {
-                      if (result) {
-                       Navigator.of(context).pushReplacementNamed('/home');
-                      } else {
-                        ScaffoldMessenger.of(context)
-                        .showSnackBar(SnackBar(
-                          content: const Text('Falha ao fazer o Login'),
-                          duration: Duration(seconds: 3),
-                          ),
-                        );
-                      }
-                    });
-                  },
-                  child: Text('Login'),
-              ),
-             ),
+            CustomLoginButtomComponent(loginController: _controller,),
           ],
         ),
       ),
