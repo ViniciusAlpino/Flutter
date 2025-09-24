@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/page/details_page.dart';
 import 'package:flutter_application_1/page/home_page.dart';
 import 'package:flutter_application_1/page/tela_carregamento.dart';
 import 'package:flutter_application_1/page/tela_login.dart';
@@ -24,6 +25,7 @@ class MyApp extends StatelessWidget {
         '/carregamento': (_) => const TelaCarregamento(),
         '/login' : (_) => TelaLogin(),
         '/home' : (_) => const HomePage(),
+        '/details' : (_) => const DetailsPage(),
       }
     );
   }
