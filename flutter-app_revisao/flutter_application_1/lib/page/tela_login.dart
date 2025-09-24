@@ -28,7 +28,7 @@ class TelaLogin extends StatelessWidget {
               obscureText: true,
             ),
             SizedBox(height: 20),
-            CustomLoginButtomComponent(loginController: _controller,),
+            CustomLoginButtomComponent(loginController: _controller),
           ],
         ),
       ),
